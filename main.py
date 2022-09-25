@@ -42,6 +42,11 @@ def all_on():
     number = do_all('true')
     return render_template('all-on.html', num=number)
 
+@app.route('/all-off')
+def all_off():
+    number = do_all('false')
+    return render_template('all-off.html', num=number)
+
 @app.route('/sprinklers')
 def index():
     data = get_sprinklers()
